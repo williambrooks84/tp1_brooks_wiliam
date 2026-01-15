@@ -72,7 +72,7 @@ class PortfolioPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 15),
             const TechIconsRow(),
             const Spacer(),
           ],
@@ -295,37 +295,48 @@ class TechIconsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          TechIcon(
-            icon: FontAwesomeIcons.flutter,
-            gradientColors: [Color(0xFF02569B), Color(0xFF42A5F5)],
-            url: 'https://flutter.dev',
-          ),
-          TechIcon(
-            icon: FontAwesomeIcons.github,
-            gradientColors: [Color(0xFF181717), Color(0xFF6E6E6E)],
-            url: 'https://github.com',
-          ),
-          TechIcon(
-            icon: FontAwesomeIcons.react,
-            gradientColors: [Color(0xFF61DAFB), Color(0xFF1F8AA5)],
-            url: 'https://react.dev',
-          ),
-          TechIcon(
-            icon: FontAwesomeIcons.bootstrap,
-            gradientColors: [Color(0xFF7952B3), Color(0xFF563D7C)],
-            url: 'https://getbootstrap.com',
-          ),
-          TechIcon(
-            icon: FontAwesomeIcons.vuejs,
-            gradientColors: [Color(0xFF42B883), Color(0xFF35495E)],
-            url: 'https://vuejs.org',
-          ),
-        ],
+    const icons = [
+      TechIcon(
+        icon: FontAwesomeIcons.flutter,
+        gradientColors: [Color(0xFF02569B), Color(0xFF42A5F5)],
+        url: 'https://flutter.dev',
+      ),
+      TechIcon(
+        icon: FontAwesomeIcons.jsSquare,
+        gradientColors: [Color(0xFFF7DF1E), Color.fromARGB(255, 190, 171, 25)],
+        url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      ),
+      TechIcon(
+        icon: FontAwesomeIcons.github,
+        gradientColors: [Color(0xFF181717), Color(0xFF6E6E6E)],
+        url: 'https://github.com',
+      ),
+      TechIcon(
+        icon: FontAwesomeIcons.react,
+        gradientColors: [Color(0xFF61DAFB), Color(0xFF1F8AA5)],
+        url: 'https://react.dev',
+      ),
+      TechIcon(
+        icon: FontAwesomeIcons.bootstrap,
+        gradientColors: [Color(0xFF7952B3), Color(0xFF563D7C)],
+        url: 'https://getbootstrap.com',
+      ),
+      TechIcon(
+        icon: FontAwesomeIcons.vuejs,
+        gradientColors: [Color(0xFF42B883), Color(0xFF35495E)],
+        url: 'https://vuejs.org',
+      ),
+    ];
+
+    return SizedBox(
+      height: 60,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        physics: const BouncingScrollPhysics(),
+        itemCount: icons.length,
+        itemBuilder: (context, index) => icons[index],
+        separatorBuilder: (_, _) => const SizedBox(width: 32),
       ),
     );
   }
