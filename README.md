@@ -1,16 +1,7 @@
 # tp1_brooks_william
 
-A new Flutter project.
+## Récapitulatif de ce qui a été fait
 
-## Getting Started
+J'ai repris le design de base en mettant des couleurs vertes (inspirées de mon site de portfolio vitrine : https://willbrooks.fr ) et en mettant mon logo en-dessous de ma photo de profil plutôt qu'en bas de la page. J'ai aussi modifié les technologies par des technologies que moi j'utilise en mettant une colonne déroulante à la place d'icônes fixes me permettant d'en ajouter autant que je le souhaite.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Capture d'écran : fichier /screenshots/capture.png
